@@ -4,22 +4,32 @@
 Option 1: SimpleRisk Scripted Installation
 
 Run this command as "root" on a newly provisioned system to perform a scripted SimpleRisk installation:
+
 curl -sL https://raw.githubusercontent.com/simplerisk/setup-scripts/master/simplerisk-setup.sh | bash -
 
 Currently supported Operating Systems include:
+
 Ubuntu 22.04
+
 Ubuntu 20.04
+
 CentOS 8
+
 CentOS 7
+
 SLES 15
+
 RHEL 9
+
 RHEL 8
+
 Debian 11
 
 
 Option 2: SimpleRisk Virtual Machine Installation
 
 VMWare Virtual Machine
+
 1) Download the Virtual Machine Image:
 SIMPLERISK 20250411-001 VIRTUAL MACHINE (VMWare)
 2) Validate the Checksum:
@@ -41,22 +51,39 @@ SECURE YOUR SIMPLERISK VIRTUAL MACHINE
 Option 3: SimpleRisk Docker Installation
 
 DockerHub Image
+
 1) Download the SimpleRisk image from DockerHub:
+
 docker pull simplerisk/simplerisk
+
 2) Start the Docker Container:
+
 docker run --name simplerisk -d -p 80:80 -p 443:443 simplerisk/simplerisk
+
 3) Test Your SimpleRisk Instance:
+
 https://localhost/
+
 Compiled Docker Image
+
 1) Clone the SimpleRisk Docker Repository:
+
 git clone https://github.com/simplerisk/docker.git simplerisk-docker
+
 2) Change to the Docker directory:
+
 cd simplerisk-docker/simplerisk
+
 3) Build the SimpleRisk Docker Image:
+
 docker build -t simplerisk/simplerisk -f noble/Dockerfile .
+
 4) Start the Docker Container:
+
 docker run --name simplerisk -d -p 80:80 -p 443:443 simplerisk/simplerisk
+
 5) Test Your SimpleRisk Instance:
+
 https://localhost/
 
 Option 4: SimpleRisk Manual Installation
@@ -65,9 +92,12 @@ WARNING: A SimpleRisk Manual Installation requires following a precise set of in
 
 
 1) Download the Web Bundle:
-SIMPLERISK 20250411-001 WEB BUNDLE
+
+[SIMPLERISK 20250411-001 WEB BUNDLE](https://services.simplerisk.com/?type=code&release=20250411-001)
 2) Validate the Checksum:
+
 MD5 Checksum = 2ce0cee46afeef101d2c3fbd2130c977
+
 3) Follow the Instructions:
 INSTALL SIMPLERISK ON UBUNTU 22.04 (APACHE/MYSQL/PHP)
 INSTALL SIMPLERISK ON UBUNTU 20.04 (APACHE/MYSQL/PHP)
